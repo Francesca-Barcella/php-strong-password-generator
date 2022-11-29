@@ -1,0 +1,32 @@
+:root {
+    --pwd_bg_primary_dark: #001632;
+    --pwd_bg_primary: #0F6EFD;
+    --pwd_bg_primary_ligth: #CFF4FC;
+    --pwd_bg_ligth: #FFFFFF;
+    --pwd_bg_secondary: #F8F9FA;
+    --pwd_bg_secondary_dark: #6C757D;
+    --pwd_text_hope: #387A84;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;;
+}
+
+h1{
+    color: var(--pwd_bg_secondary_dark);
+}
+
+h3{
+    color: var(--pwd_bg_secondary);
+    opacity: 85%;
+}
+
+.container{
+    background-color: var(--pwd_bg_primary_dark);
+}
+
+form{
+    background-color: var(--pwd_bg_secondary);
+}

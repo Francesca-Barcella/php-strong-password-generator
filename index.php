@@ -19,3 +19,85 @@ Invece di visualizzare la password nella index, effettuare un redirect ad una pa
 
 */
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pwd generator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+    <header>Spazio header</header>
+
+    <main>
+        <!-- MILESTONE 1
+        Creare un form che invii in GET la lunghezza della password. Una nostra funzione utilizzerà questo dato per generare una password casuale (composta da lettere, lettere maiuscole, numeri e simboli) da restituire all’utente. Scriviamo tutto (logica e layout) in un unico file index.php 
+        -->
+        <div class="container p-5">
+            <div class="text-center">
+                <h1>Strong Passaword Generator</h1>
+                <h3>Genera una password sicura</h3>
+            </div>
+            <form action="index.php" method="GET" class="p-5 my-5 rounded-2">
+                <!-- lunghezza password -->
+                <div class="mb-3 d-flex justify-content-around">
+                    <div class="col-6"> <label for="lugnhezza_pwd" class="form-label">Lunghezza password:</label></div>
+                    <div class="col-4"> <input type="number" name="pweLen" id="pweLen" class="form-control"></div>
+                </div>
+                <!-- ripetizioni caratteri SI/NO password -->
+                <div class="mb-3 d-flex justify-content-around">
+                    <div class="col-6"><label for="criteri_caratteri" class="form-label">Consenti ripetizioni di uno o più caratteri:</label></div>
+                    <div class="col-4">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="radio" id="radio_si" value="si" checked>
+                            <label class="form-check-label" for="radio">Si</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="radio" id="radio_no" value="no">
+                            <label class="form-check-label" for="radio2">No</label>
+                        </div>
+                    </div>
+                </div>
+                <!-- ripetizioni caratteri LETTERE/NUMERI/CARATTERI password -->
+                <div class="mb-3 d-flex justify-content-around">
+                    <div class="col-6"><label for="criteri_caratteri" class="form-label"></label></div>
+                    <div class="col-4">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="si" name="lettere" id="lettere">
+                            <label class="form-check-label" for="lettere">Lettere</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="si" name="numeri" id="numeri">
+                            <label class="form-check-label" for="numeri">Numeri</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="si" name="simboli" id="simboli">
+                            <label class="form-check-label" for="simboli">Simboli</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- pulsanti INVIA e ANNULLA-->
+                <div class="mb-3 d-flex justify-content-around">
+                    <div class="col-6">
+                        <button type="submit" class="btn btn-primary me-2">Invia</button>
+                        <button type="reset" class="btn btn-secondary">Annulla</button>
+                    </div>
+                    <div class="col-4"></div>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer>Spazio footer</footer>
+</body>
+
+</html>
