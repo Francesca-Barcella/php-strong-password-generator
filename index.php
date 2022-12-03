@@ -18,6 +18,23 @@ MILESTONE 4 (BONUS - OPZIONALE)
 Invece di visualizzare la password nella index, effettuare un redirect ad una pagina dedicata che tramite $_SESSION (documentazione) recupererà la password da mostrare all’utente.
 
 */
+
+/* 
+MILESTONE 1
+Creare un form che invii in GET la lunghezza della password. Una nostra funzione utilizzerà questo dato per generare una password casuale (composta da lettere, lettere maiuscole, numeri e simboli) da restituire all’utente. Scriviamo tutto (logica e layout) in un unico file index.php
+*/
+
+/* sintassi della funzione */
+function nome_funzione(...$param)
+{
+    // code here ..
+}
+
+
+if (isset($_GET['pweLen'])) {
+    var_dump($_GET['pweLen']);
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -35,25 +52,25 @@ Invece di visualizzare la password nella index, effettuare un redirect ad una pa
 </head>
 
 <body>
-    <header>Spazio header</header>
+    <header class="mb-2"></header>
 
     <main>
         <!-- MILESTONE 1
         Creare un form che invii in GET la lunghezza della password. Una nostra funzione utilizzerà questo dato per generare una password casuale (composta da lettere, lettere maiuscole, numeri e simboli) da restituire all’utente. Scriviamo tutto (logica e layout) in un unico file index.php 
         -->
-        <div class="container p-5">
+        <div class="container p-4">
             <div class="text-center">
                 <h1>Strong Passaword Generator</h1>
                 <h3>Genera una password sicura</h3>
             </div>
             <form action="index.php" method="GET" class="p-5 my-5 rounded-2">
                 <!-- lunghezza password -->
-                <div class="mb-3 d-flex justify-content-around">
+                <div class="mt-3 d-flex justify-content-around">
                     <div class="col-6"> <label for="lugnhezza_pwd" class="form-label">Lunghezza password:</label></div>
                     <div class="col-4"> <input type="number" name="pweLen" id="pweLen" class="form-control"></div>
                 </div>
                 <!-- ripetizioni caratteri SI/NO password -->
-                <div class="mb-3 d-flex justify-content-around">
+                <div class="my-3 d-flex justify-content-around">
                     <div class="col-6"><label for="criteri_caratteri" class="form-label">Consenti ripetizioni di uno o più caratteri:</label></div>
                     <div class="col-4">
                         <div class="form-check">
@@ -67,7 +84,7 @@ Invece di visualizzare la password nella index, effettuare un redirect ad una pa
                     </div>
                 </div>
                 <!-- ripetizioni caratteri LETTERE/NUMERI/CARATTERI password -->
-                <div class="mb-3 d-flex justify-content-around">
+                <div class="my-3 d-flex justify-content-around">
                     <div class="col-6"><label for="criteri_caratteri" class="form-label"></label></div>
                     <div class="col-4">
                         <div class="form-check">
@@ -86,7 +103,7 @@ Invece di visualizzare la password nella index, effettuare un redirect ad una pa
                 </div>
 
                 <!-- pulsanti INVIA e ANNULLA-->
-                <div class="mb-3 d-flex justify-content-around">
+                <div class="d-flex justify-content-around">
                     <div class="col-6">
                         <button type="submit" class="btn btn-primary me-2">Invia</button>
                         <button type="reset" class="btn btn-secondary">Annulla</button>
@@ -97,7 +114,7 @@ Invece di visualizzare la password nella index, effettuare un redirect ad una pa
         </div>
     </main>
 
-    <footer>Spazio footer</footer>
+    <footer></footer>
 </body>
 
 </html>
