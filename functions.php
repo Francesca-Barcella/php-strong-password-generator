@@ -21,9 +21,14 @@ function generate_password($pwd_len)
     while (strlen($password) < $pwd_len) {
         //ad ogni iterazione sceglie un carattere della lista
         $character = $characters_list[rand(0, strlen($characters_list))];
-        //var_dump($character);
         //concateno il carattere scelto alla stringa della password
-        $password .= $character;
+        if(!str_contains($password, $character) && !$_GET['duplicates']){
+            $password .= $character;
+        } else {
+            $password .= $character;
+        }
+        //var_dump($character);
+        //$password .= $character;
     }
     return ['class' => 'info', 'result' => $password];
 }

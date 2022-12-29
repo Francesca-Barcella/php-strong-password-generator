@@ -75,17 +75,19 @@ if (isset($_GET['pwdLen'])) {
                     <div class="col-6">
                         <label for="criteri_caratteri" class="form-label">Consenti ripetizioni di uno o più caratteri:</label>
                     </div>
+
                     <div class="col-4">
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="radio" id="radio_si" value="si" checked>
-                            <label class="form-check-label" for="radio">Si</label>
+                            <input class="form-check-input" type="radio" name="duplicates" id="duplicates" value="si">
+                            <label class="form-check-label" for="duplicates">Si</label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="radio" id="radio_no" value="no">
-                            <label class="form-check-label" for="radio2">No</label>
+                            <input class="form-check-input" type="radio" name="duplicates" id="radio_no" value="no" checked>
+                            <label class="form-check-label" for="duplicates">No</label>
                         </div>
                     </div>
                 </div>
+
                 <!-- ripetizioni caratteri LETTERE/NUMERI/CARATTERI password -->
                 <div class="my-3 d-flex justify-content-around">
                     <div class="col-6"><label for="criteri_caratteri" class="form-label"></label></div>
