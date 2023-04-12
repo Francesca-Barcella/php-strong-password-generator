@@ -121,6 +121,26 @@ if (isset($_GET['pwdLen'])) {
                     <strong>Password = </strong> <?= $password['result']; ?>
                 </div>
             <?php endif; ?>
+            <!-- MILESTONE 4 (BONUS - OPZIONALE)
+            Invece di visualizzare la password nella index, effettuare un redirect ad una pagina dedicata che tramite $_SESSION (documentazione) recupererà la password da mostrare all’utente. 
+                IPOTESI PROCEDIMENTO:
+                - if result contine errore allorastampo il div  per l'errore
+                - else resul non contiene allora mando alla thankyou page
+                IPOTESI 2:
+                - if mail è settata o valida?
+                - redirect thankyou page
+                - else
+                - il div che c'è sopra solo con esito neagativo
+        -->
+        <?php if (str_contains($password, 'Errore!')) : ?>
+            <div class="alert alert-<?= $password['class']; ?>" role="alert">
+                    <strong>Password 2= </strong> <?= $password['result']; ?>
+                </div>
+
+        <?php endif; ?>
+
+        
+
         </div>
     </main>
 
